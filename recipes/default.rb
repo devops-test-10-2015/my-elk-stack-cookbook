@@ -4,8 +4,8 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-user 'elkuser' do
+user node[:elk][:user] do
   comment 'Running Elastic Search, Logstash and Kibana'
-  home '/home/elkuser'
+  home "/home/#{node[:elk][:user]}"
   shell '/bin/bash'
 end
