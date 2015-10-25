@@ -1,4 +1,8 @@
 ---
+
+driver:
+  name: vagrant
+
 #driver:
 #  name: docker
 #  use_sudo: false
@@ -7,12 +11,22 @@
 #  require_chef_omnibus: false
 #  use_cache: true
 
+# I don't think this is going to work as the container is not being started with init
+#driver:
+#  name: docker
+#  use_sudo: false
+#  # This is to get avoid installing chef omnibus every time we run
+#  image: kevinhcross/centos-systemd
+#  provision_command: curl -L https://www.getchef.com/chef/install.sh | bash
+#  require_chef_omnibus: false
+#  use_cache: true
+
 # This should also work according to https://github.com/test-kitchen/test-kitchen/issues/315
-driver:
-  name: docker
-  use_sudo: false
-  provision_command: curl -L https://www.getchef.com/chef/install.sh | bash
-  require_chef_omnibus: false
+#driver:
+#  name: docker
+#  use_sudo: false
+#  provision_command: curl -L https://www.getchef.com/chef/install.sh | bash
+#  require_chef_omnibus: false
 
 ## The forwarded_port port feature lets you connect to ports on the VM guest via
 ## localhost on the host.
@@ -39,3 +53,4 @@ platforms:
 suites:
   - name: default
     attributes:
+

@@ -1,5 +1,5 @@
 {
-  "revision_id": "a1734824ebd23f0314ea0e7e2865ab18e6c74adcf25169a97be7a101ca3206eb",
+  "revision_id": "18026884c10f0f958455d91f7c19f8fac96f4c071de633450916852cf2841ce6",
   "name": "my-elk-stack-cookbook",
   "run_list": [
     "recipe[my-elk-stack-cookbook::default]"
@@ -7,14 +7,14 @@
   "cookbook_locks": {
     "my-elk-stack-cookbook": {
       "version": "0.1.0",
-      "identifier": "4c7166a20fabafb9187205d10496bf6b5dc54c65",
-      "dotted_decimal_identifier": "21516783849548719.52099748694394006.210467855617125",
+      "identifier": "622cbeacca12d176f641b9a8190062d693e0e336",
+      "dotted_decimal_identifier": "27633745171976913.33484809399965952.108673743512374",
       "source": ".",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": null,
-        "revision": "fd2c24e837f95ae7e1b9bd1dcd65d2b2b7685f12",
+        "revision": "fd76c6b810e9e776f72c016abf7950186a7e0b3b",
         "working_tree_clean": false,
         "published": false,
         "synchronized_remote_branches": [
