@@ -7,8 +7,6 @@
 package 'java-1.8.0-openjdk-devel'
 package 'curl'
 package 'logrotate'
-package 'systemd'
-#package 'systemd-libs'
 
 user node[:elk][:user] do
   comment 'Running Elastic Search, Logstash and Kibana'
@@ -59,18 +57,8 @@ rpm_package 'elasticsearch' do
   source es_rpm_temp_loc
 end
 
-service 'elasticsearch'
-# It seems that chef does not yet support systemd
-#service 'elasticsearch' do
-#  supports :status => true, :restart => true, :reload => true
-#  action [ :enable, :start ]
-#end
-
-execute 'enable_elasticsearch' do
-  command 'systemctl enable elasticsearch'
-end
-
-execute 'start_elasticsearch' do
-  command 'systemctl start elasticsearch'
+service 'elasticsearch' do
+  supports :status => true, :restart => true, :reload => true
+  action [ :enable, :start ]
 end
 

@@ -21,11 +21,6 @@ describe user(app_user_name) do
   it { should have_login_shell '/bin/bash' }
 end
 
-# Need tests for
-# * logstash installation
-# * elastic search server running on the expected port
-# * a simple curl type test that can be run to confirm that elastic search is working as expected
-
 # required packages ######################################################
 describe package('java-1.8.0-openjdk-devel') do
   it { should be_installed }
@@ -59,6 +54,7 @@ describe command("curl 'localhost:#{elasticsearch_default_port}/_cat/health?v'")
 end
 
 # get the elasticsearch version from the api ############################################
+# the call returns something like this:
 #{
 #  "status" : 200,
 #  "name" : "Kleinstocks",
