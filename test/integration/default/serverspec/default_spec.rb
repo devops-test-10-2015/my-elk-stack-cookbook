@@ -27,7 +27,7 @@ end
 # * a simple curl type test that can be run to confirm that elastic search is working as expected
 
 # required packages ######################################################
-describe package('openjdk-7-jdk') do
+describe package('java-1.8.0-openjdk-devel') do
   it { should be_installed }
 end
 
@@ -37,7 +37,7 @@ describe package('curl') do
 end
 
 # logstash test ######################################################
-describe command('logstash --version') do
+describe command('/opt/logstash/bin/logstash --version') do
   its(:stdout) { should match /logstash 1.5.4/ }
 end
 

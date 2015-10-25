@@ -14,4 +14,15 @@
     chef install
     kitchen test all
 
+Once you have done that initial set up you can test any changes to the cookbook using these commands:
+
+    kitchen converge
+    kitchen verify
+
+
+#### To add a dependency
+
+* Add a `depends` to `metadata.rb`
+* Run `chef update`
+* Restart your test instance : `kitchen test`
 
