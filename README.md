@@ -6,10 +6,12 @@
 
 * You must be able to run docker without sudo to run the kitchen tests.
 
-### Set up
+### Development and test set up
 
 * Install ChefDK for your platform
-* Run `bundle install`
-
+* Run the following commands:
+    bundle install
+    chef install
+    kitchen test all
 
 

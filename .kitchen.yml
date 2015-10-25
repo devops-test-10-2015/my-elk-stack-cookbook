@@ -2,6 +2,14 @@
 driver:
   name: docker
   use_sudo: false
+  image: kevinhcross/chef
+  require_chef_omnibus: false
+  use_cache: true
+
+# This should also work according to https://github.com/test-kitchen/test-kitchen/issues/315
+#driver:
+#  name: docker
+#  provision_command: curl -L https://www.getchef.com/chef/install.sh | bash
 
 ## The forwarded_port port feature lets you connect to ports on the VM guest via
 ## localhost on the host.

@@ -1,0 +1,48 @@
+{
+  "revision_id": "b5114a7576b81010a3fd6d09f4704faf7978bd19960d678078f22e648106f91f",
+  "name": "my-elk-stack-cookbook",
+  "run_list": [
+    "recipe[my-elk-stack-cookbook::default]"
+  ],
+  "cookbook_locks": {
+    "my-elk-stack-cookbook": {
+      "version": "0.1.0",
+      "identifier": "6cd9ef4b1091742bcae08b8b77643c7018ca51fa",
+      "dotted_decimal_identifier": "30638919264538996.12326489761216356.66452149916154",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "badd21d7b5de42804d822aae34b6572e2e4c264b",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "my-elk-stack-cookbook",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "my-elk-stack-cookbook (0.1.0)": [
+
+      ]
+    }
+  }
+}
