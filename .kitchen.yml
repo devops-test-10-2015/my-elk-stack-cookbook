@@ -2,6 +2,7 @@
 driver:
   name: docker
   use_sudo: false
+  # This is to get avoid installing chef omnibus every time we run
   image: kevinhcross/chef
   require_chef_omnibus: false
   use_cache: true
