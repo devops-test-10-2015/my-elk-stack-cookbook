@@ -2,6 +2,8 @@
 
 This cookbook will do a simple install of Logstash and Elastic Search on CentOS or RedHat.
 
+It is currently missing the Kibana part of the ELK stack. That may be added later.
+
 It has been tested with CentOS 7.1.
 
 ## System set up
