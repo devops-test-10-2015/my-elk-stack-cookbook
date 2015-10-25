@@ -72,7 +72,7 @@ end
 #  },
 #  "tagline" : "You Know, for Search"
 #}
-describe command("curl 'localhost:#{elasticsearch_default_port}/_cat/health?v'") do
+describe command("curl 'localhost:#{elasticsearch_default_port}'") do
   its(:stdout) { should match /"number" : "1.7.3"/ }
 end
 
