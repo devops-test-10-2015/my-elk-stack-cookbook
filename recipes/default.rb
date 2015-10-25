@@ -8,15 +8,15 @@ package 'java-1.8.0-openjdk-devel'
 package 'curl'
 package 'logrotate'
 
-user node[:elk][:user] do
+user node['elk']['user'] do
   comment 'Running Elastic Search, Logstash and Kibana'
-  home "/home/#{node[:elk][:user]}"
+  home "/home/#{node['elk']['user']}"
   shell '/bin/bash'
 end
 
-directory node[:elk][:user] do
-  owner node[:elk][:user] 
-  group node[:elk][:user] 
+directory node['elk']['user'] do
+  owner node['elk']['user'] 
+  group node['elk']['user'] 
   mode '0755'
   action :create
 end
@@ -27,10 +27,10 @@ end
 ls_rpm_temp_loc = '/tmp/logstash.rpm' 
 
 remote_file ls_rpm_temp_loc do
-  source "https://download.elastic.co/logstash/logstash/packages/centos/logstash-#{node[:elk][:logstash][:version]}-1.noarch.rpm"
-  checksum node[:elk][:logstash][:checksum] 
-  owner node[:elk][:user] 
-  group node[:elk][:user] 
+  source "https://download.elastic.co/logstash/logstash/packages/centos/logstash-#{node['elk']['logstash']['version']}-1.noarch.rpm"
+  checksum node['elk']['logstash']['checksum'] 
+  owner node['elk']['user'] 
+  group node['elk']['user'] 
   mode '0755'
   action :create
 end
@@ -45,10 +45,10 @@ end
 es_rpm_temp_loc = '/tmp/elasticsearch.rpm'
 
 remote_file es_rpm_temp_loc do
-  source "https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-#{node[:elk][:elasticsearch][:version]}.noarch.rpm"
-  checksum node[:elk][:elasticsearch][:checksum] 
-  owner node[:elk][:user] 
-  group node[:elk][:user] 
+  source "https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-#{node['elk']['elasticsearch']['version']}.noarch.rpm"
+  checksum node['elk']['elasticsearch']['checksum'] 
+  owner node['elk']['user'] 
+  group node['elk']['user'] 
   mode '0755'
   action :create
 end
